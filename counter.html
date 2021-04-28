@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+        }
+        .container{
+            font-family: 'Freckle Face', cursive;
+            padding: 30px;
+            text-align: center;
+            color: crimson;
+            text-transform: uppercase;
+            background: linear-gradient(to right, #70e1f5, #ffd194);
+        }
+        .box{
+            padding: 13.7%;
+            margin-top: 20px;
+            border: 2px;
+            box-shadow: 0 4px 8px 0 rgba(95, 94, 94, 1), 0 6px 20px 0 rgba(255, 0, 0, 0.19);
+            border-radius: 90px;
+            background: linear-gradient(to right, #ede574, #e1f5c4);
+        }
+        #decrement{
+            float: left;
+            font-size: 80px;
+            margin-top: -8.5px;
+            cursor: pointer;
+        }
+        #number{
+            user-select: none;
+            padding: 30px 45px;
+            font-size: 45px;
+            background: none;
+            border: none;
+            color: red;
+            margin-bottom: 85px;
+        }
+        #increment{
+            float: right;
+            font-size: 80px;
+            color: green;
+            cursor: pointer;
+        }
+        #decrement:active{
+            color: darkgreen;
+        }
+        #increment:active{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="container">
+        <h1>Counter</h1>
+        <div class="box">
+
+            <div class="top">
+                <button id="number" class="btn"> 0 </button>
+            </div>
+
+            <h1 id="decrement" class="btn"> - </h1>
+
+
+            <h2 id="increment" class="btn"> + </h2>
+        </div>
+    </div>
+
+    <script>
+
+        const sub = document.getElementById('decrement')
+        const num = document.getElementById('number');
+        const add = document.getElementById('increment');
+
+        let count = 0;
+
+        add.onclick = function() {
+            count += 1;
+            num.innerHTML = count;
+        };
+
+        sub.onclick = function() {
+            count -= 1;
+            num.innerHTML = count;
+        };
+
+    </script>
+    
+</body>
+</html>
